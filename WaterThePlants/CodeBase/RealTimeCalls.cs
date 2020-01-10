@@ -27,5 +27,10 @@ namespace WaterThePlants.CodeBase
             var hubContext = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<Hubs.NotifyAllUsersHub>();
             hubContext.Clients.All.OnReminder(plantId);
         }
+        public static void NotifyOnFreeToWater(int plantId)
+        {
+            var hubContext = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<Hubs.NotifyAllUsersHub>();
+            hubContext.Clients.All.OnFreeToWater(plantId);
+        }
     }
 }

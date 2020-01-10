@@ -96,7 +96,10 @@ div.plant-chooser{
                     $('#plant' + plantID[i]).removeClass('disabled');
                 }
             }
-
+            notify.client.OnFreeToWater = function (plantID) {
+                $('#plant' + plantID).removeClass('disabled');
+                $('#status_' + plantID).html('<span class="label label-info">Free for water </span>');
+            }
             notify.client.OnCompleteWateringPlants = function (plantID) {
                 $.each(plantID, function (v, i) {
                     var counter = 30;

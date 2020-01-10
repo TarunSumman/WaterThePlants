@@ -25,5 +25,9 @@ namespace WaterThePlants.Hubs
         {
             Clients.All.OnReminder(plantID);
         }
+        public void OnFreeToWater(int plantID)
+        {
+            Clients.All.OnFreeToWater(plantID);
+        }
     }
 }
